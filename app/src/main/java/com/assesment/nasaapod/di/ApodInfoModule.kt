@@ -6,7 +6,7 @@ import com.assesment.nasaapod.data.local.ApodInfoDataBase
 import com.assesment.nasaapod.data.remote.ApodApi
 import com.assesment.nasaapod.data.repository.ApodInfoRepositoryImpl
 import com.assesment.nasaapod.domain.repository.ApodInfoRepository
-import com.assesment.nasaapod.domain.usecase.GetApodInfo
+import com.assesment.nasaapod.domain.usecase.GetApodInfoUsecase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,8 +24,8 @@ object ApodInfoModule {
 
     @Provides
     @Singleton
-    fun provideGetApodInfoUseCase(repository: ApodInfoRepository): GetApodInfo {
-        return GetApodInfo(repository)
+    fun provideGetApodInfoUseCase(repository: ApodInfoRepository): GetApodInfoUsecase {
+        return GetApodInfoUsecase(repository)
     }
 
     @Provides

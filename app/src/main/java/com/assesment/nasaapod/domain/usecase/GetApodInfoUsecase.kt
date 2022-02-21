@@ -5,7 +5,7 @@ import com.assesment.nasaapod.domain.model.ApodInfo
 import com.assesment.nasaapod.domain.repository.ApodInfoRepository
 import kotlinx.coroutines.flow.Flow
 
-class GetApodInfo(
+class GetApodInfoUsecase(
     private val repository: ApodInfoRepository
 ) {
 
